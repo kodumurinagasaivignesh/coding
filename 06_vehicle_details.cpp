@@ -38,3 +38,16 @@ int main()
 
     return 0;
 }
+
+
+float fun(int &a,char&b,float &c)
+{ cout<<b<<endl;
+ return(a*c);
+
+}
+int main()
+{
+    int a1;char b1;float c1;
+    cin>>a1>>b1>>c1;
+    cout<<  fun(a1,b1,c1);
+}
