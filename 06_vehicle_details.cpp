@@ -51,3 +51,21 @@ int main()
     cin>>a1>>b1>>c1;
     cout<<  fun(a1,b1,c1);
 }
+
+
+//locaaland global variable
+int x;
+main(){
+int y=0;
+{
+    int y=20;
+    cout<<x<<y<<endl;
+    x++;y++;
+    {
+        int y =20;
+        cout<<x<<y<<endl;
+    }
+
+}
+cout<<x<<y;
+}
