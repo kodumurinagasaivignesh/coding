@@ -133,3 +133,43 @@ int main()
     t.in();
     function(t);
     fun2(t);
+
+
+//Write a C++ program to demonstrate a friend function that compares private character data members of two different classes and returns the largest character.
+class one
+{
+    char name;
+public:
+    void take1()
+    {
+        cout<<"enter data";
+        cin>>name;
+    }
+    friend char largest(class one,class two);
+};
+class two
+{
+    char fame;
+public:
+    void take2()
+    {
+        cout<<"enter data ";
+        cin>>fame;
+
+    }
+    friend char largest(class one,class two);
+};
+char largest(class one t1,class two t2)
+{
+    if (t1.name>t2.fame)
+        return t1.name;
+    else
+        return t2.fame;
+}
+int main()
+{
+    class one obj1;
+    class two obj2;
+    obj1.take1();
+    obj2.take2();
+    cout<<largest(obj1,obj2);
