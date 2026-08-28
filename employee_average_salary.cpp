@@ -102,3 +102,34 @@ int main()
     t.in();
     function(t);
 }
+
+
+//Write a C++ program to demonstrate multiple friend functions that access private data members of a class and perform different calculations.
+class one
+{
+    float a,b,c;
+public:
+    void in()
+    {
+        cout<<"enter data";
+        cin>>a>>b>>c;
+
+    }
+    friend void function(class one );
+    friend void fun2(class one );
+};
+void function (class one a1)
+{
+    cout<<a1.a*a1.b<<endl;
+
+}
+void fun2(class one nn)
+{
+    cout<<(nn.a/nn.b)*nn.c;
+}
+int main()
+{
+    class one t;
+    t.in();
+    function(t);
+    fun2(t);
