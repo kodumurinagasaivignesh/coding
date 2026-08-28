@@ -173,3 +173,59 @@ int main()
     obj1.take1();
     obj2.take2();
     cout<<largest(obj1,obj2);
+
+//Write a C++ program to demonstrate a friend function that accesses private data members of three different classes and finds the largest character.
+
+class one
+{
+    char name;
+public:
+    void take1()
+    {
+        cout<<"enter data";
+        cin>>name;
+    }
+    friend char largest(class one,class two,class three);
+};
+class two
+{
+    char fame;
+public:
+    void take2()
+    {
+        cout<<"enter data ";
+        cin>>fame;
+
+    }
+    friend char largest(class one,class two,class three);
+};
+class three
+{
+    char game;
+public:
+
+    void take3()
+    {
+        cout<<"enter data";
+        cin>>game;
+    }
+    friend char largest(class one,class two,class three);
+};
+char largest(class one t1,class two t2,class three t3)
+{
+    if (t1.name>t2.fame&&t1.name>t3.game)
+        return t1.name;
+    else if (t2.fame>t1.name&&t2.fame>t3.game)
+        return t2.fame;
+    else
+        return t3.game;
+}
+int main()
+{
+    class one obj1;
+    class two obj2;
+    class three obj3;
+    obj1.take1();
+    obj2.take2();
+    obj3.take3();
+    cout<<largest(obj1,obj2,obj3);
