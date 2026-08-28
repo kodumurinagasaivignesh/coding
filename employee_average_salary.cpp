@@ -76,3 +76,29 @@ int main()
     cout << per(100, 'a') << endl;
 
     return 0;
+
+//Write a C++ program to demonstrate a friend function that accesses private data members of a class and calculates the product of two numbers.
+#include <iostream>
+using namespace std;
+class one
+{
+    float a,b;
+public:
+    void in()
+    {
+        cout<<"enter data";
+        cin>>a>>b;
+
+    }
+    friend void function (class one );
+};
+void function (class one a1)
+{
+    cout<<a1.a*a1.b<<endl;
+}
+int main()
+{
+    class one t;
+    t.in();
+    function(t);
+}
