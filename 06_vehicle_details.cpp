@@ -79,5 +79,15 @@ float *a=&c;
 cout<<a<<endl<<a+2;//48-83=8 in exadecimal system
 
 }
+#include<iostream>
+using namespace std;
+int main()
+{
+float c=12.33;
+float *a=&c;
+cout<<a<<endl<<a+2;//48-83=8 in exadecimal system
+cout<<++a;
+}
+
 
 
