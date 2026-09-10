@@ -89,5 +89,32 @@ cout<<a<<endl<<a+2;//48-83=8 in exadecimal system
 cout<<++a;
 }
 
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
 
+int main() {
+
+    void *b;
+    int a =20;
+    b=&a;
+    cout<<*(int*)b<<endl;
+    float r =20.2365;
+    b=&r;
+    cout<<*(float*)b<<endl;
+    char n;
+    n='y';
+    b=&n;
+    cout<<*(char*)b<<endl;
+
+    
+    float *p;
+    {
+        float n=45.36;
+        p=&n;
+        cout<<p<<endl<<*p<<endl;
+    }
+    p=NULL;
+    cout<<p<<endl;
+}
 
