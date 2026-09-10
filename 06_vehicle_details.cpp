@@ -170,4 +170,36 @@ void *b;
         dd.out();     
 
     }
+#include <iostream>
+using namespace std;
+class data
+    {
+      string name;
+        float sal;
+        string subject;
+    
+        public:
+        void one ()
+        {
+            cin>>name>>sal>>subject;
+            
+        }
+        void two()
+        {
+            cout<<name<<endl<<sal<<endl<<subject<<endl;
+        }
+        
+    };
+    int main()
+    {
+     class data d1,*d2;
+        d1.one();
+        d2=&d1;
+        d2->two();
+        
+
+    }
+
+
+
 
