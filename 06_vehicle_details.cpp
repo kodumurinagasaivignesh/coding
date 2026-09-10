@@ -118,3 +118,56 @@ int main() {
     cout<<p<<endl;
 }
 
+
+void *b;
+    int a =20;
+    b=&a;
+    cout<<*(int*)b<<endl;
+    float r =20.2365;
+    b=&r;
+    cout<<*(float*)b<<endl;
+    char n;
+    n='y';
+    b=&n;
+    cout<<*(char*)b<<endl;
+
+    
+    float *p;
+    {
+        float n=45.36;
+        p=&n;
+        cout<<p<<endl<<*p<<endl;
+    }
+    p=NULL;
+    cout<<p<<endl;
+
+    class data
+    {
+      string name;
+        float *Cgpa;
+        int *roll;
+        public:
+        void take(float m,int n)
+        {
+            cout<<"enter data";
+            Cgpa=&m;
+            roll=&n;
+        }
+        void out()
+        {
+            cout<<"out put = "<<*Cgpa<<endl<<*roll<<endl;
+        }
+        
+    };
+    int main()
+    {
+     class data dd;
+        int mm;
+        float nn;
+        cout<<"enter data";
+        cin>>mm>>nn;
+        dd.take(nn,mm);
+        dd.out();     
+
+    }
+
