@@ -201,5 +201,47 @@ class data
     }
 
 
+#include<iostream>
+using namespace std;
+class teacher()
+{
+
+    string name ;
+    float sal;
+    string subjects;
+public:
+    void one()
+    {
+        cin>> name>> sal>> subject;
+
+    }
+    void two()
+    {
+
+        cout<< name<<endl<<sal<<endl<<subject;
+    }
+    float salary()
+    {
+        return sal
+    }
+};
+int main()
+{
+   class teacher t[4];
+	int i,j=0;
+	for(i=0;i<4;i++){
+		t[i].one();
+	}
+	float salarylargest=t[0].salary();
+	
+	for(i=1;i<4;i++){
+		if(t[i].salary()>salarylargest){
+			salarylargest=t[i].salary();
+			j=i;
+		}
+	}
+	t[j].two();
+
+}
 
 
