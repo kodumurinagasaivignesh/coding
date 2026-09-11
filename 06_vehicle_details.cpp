@@ -245,3 +245,46 @@ int main()
 }
 
 
+
+#include<iostream>
+using namespace std;
+class board
+{
+	string cat;
+	float cost;
+	public:
+		void take()
+		{
+			cin>>cat>>cost;
+		}
+		void dis()
+		{
+			cout<<cat<<cost<<endl;
+		}
+		string bd()
+		{
+			return cat;
+		}
+};
+int main()
+{
+	class board b[3];
+	int i,j=-1;
+	string bs;
+	for(i=0;i<3;i++)
+	{
+		b[i].take();
+	}
+	cout<<"enter the board cat to search";
+	cin>>bs;
+	for(i=0;i<3;i++)
+	{
+		if(b[i].bd()==bs)
+		b[i].dis();
+		j++;
+	}
+	if(j==-1)
+	cout<<"board cat you are searching does not exist";
+}
+
+
