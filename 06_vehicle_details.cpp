@@ -484,4 +484,39 @@ int main()
 
 
 }
+#include <iostream>
+using namespace std;
+
+class Laptop {
+    string company;
+    float cost;
+
+public:
+    Laptop() {
+        company = "hp";
+        cost = 0;
+    }
+    Laptop(string c, float p) {
+        company = c;
+        cost = p;
+    }
+    Laptop(string c) {
+        company = c;
+        cost = 50000;
+    }
+    void dis() {
+        cout << "Company: " << company << endl;
+        cout << "Cost: " << cost << endl;
+    }
+};
+
+int main() {
+    Laptop l1;
+    Laptop l2("Dell", 65000);
+    Laptop l3("lenovo");
+    l1.dis();
+    l2.dis();
+    l3.dis();
+}
+
 
