@@ -569,3 +569,27 @@ int main()
     return 0;
 }
 
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main ()
+{
+
+    ofstream ff;
+    ff.open("hello.cpp");
+    ff<<"love you baache\n";
+    ff<<"kya kar rahe";
+    ff.close();
+    char name[40];
+    ifstream ff2;
+    ff2.open("hello.cpp");
+    while(ff2)
+    {
+     ff2.getline(name,40);
+       cout<<name;
+    }
+
+    ff2.close();
+
+
+}
