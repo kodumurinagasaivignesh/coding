@@ -519,4 +519,53 @@ int main() {
     l3.dis();
 }
 
+#include <iostream>
+using namespace std;
+
+class Data
+{
+    int a, b;
+    float c;
+
+public:
+
+    // Parameterized constructor
+    Data(int aa, int bb, float cc)
+    {
+        a = aa;
+        b = bb;
+        c = cc;
+    }
+
+    // Copy constructor
+    Data(const Data &r)
+    {
+        a = r.a;
+        b = r.b;
+        c = r.c;
+    }
+
+    // Member function
+    void process()
+    {
+        cout << a * b * c << endl;
+    }
+
+    // Destructor
+    ~Data()
+    {
+        cout << "Object destroyed" << endl;
+    }
+};
+
+int main()
+{
+    Data d(5, 8, 1);
+    d.process();
+
+    Data d2(d);
+    d2.process();
+
+    return 0;
+}
 
