@@ -608,3 +608,28 @@ int main()
     file.close();
     return 0;
 }
+#include<iostream>
+using namespace std;
+class height
+{
+    int feet,inch;
+public:
+    void take()
+    {
+        cin>>feet>>inches;
+    }
+    void operater+(class height h2)
+    {
+        cout<<this->feet+h2.feet<<endl;
+        cout<<this->inches+h2.inches;
+    }
+};
+int main()
+{
+    class height h1;
+        h1.take();
+        h2.take();
+        h1+h2;
+        //h11.operator+(h22);
+
+}
