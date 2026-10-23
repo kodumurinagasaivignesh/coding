@@ -893,3 +893,28 @@ comp comp::operator*(class comp c2)
      class spam obj(369);
      obj.dis();
  }
+
+
+#include<iostream>
+using namespace std;
+class name
+{int feet , inches;
+    public:
+        name(int value)//value = 190
+        {
+            feet=value/12;
+            inches=value%12;
+        }
+        void out()
+        {
+            cout<<"your height in feet and inches is ="<<feet<<" "<<inches;
+        }
+};
+int main()
+{
+    int num;
+    cout<<"Enter the height in inches";
+    cin>>num;//190
+    class name n(num);
+    n.out();
+}
