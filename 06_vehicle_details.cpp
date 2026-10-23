@@ -918,3 +918,26 @@ int main()
     class name n(num);
     n.out();
 }
+
+
+#include <iostream>
+using namespace std;
+class Distance {
+    float met,cm;
+public:
+    void input()
+    {
+        cin>>met>>cm;
+    }
+    operator float() {
+    return met+ (cm / 100.0f);
+    }
+};
+int main() {
+
+    class Distance dd;
+    dd.input();
+    float n;
+    n=dd.operator float();
+    cout<<n;
+}
