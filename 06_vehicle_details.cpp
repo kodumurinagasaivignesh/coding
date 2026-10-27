@@ -977,3 +977,40 @@ int main()
     s1.process();
 
 }
+include<iostream>
+using namespace std;
+class sem_1;
+{
+protected:
+    char name[20];
+    int rollno;
+    float tgpa1;
+public:
+    void input()
+    {
+        cin>>name>>rollno>>tgpa1;
+    }
+
+};
+class sem_2:public sem_1
+{
+    float tgpa2;
+    public:
+    void input2()
+    {
+        cin>>tgpa2;
+    }
+
+    void cal()
+    {
+        cout<<(tgpa1+tgpa2)/2;
+    }
+};
+int main()
+{
+    class sem_2 tt;
+    tt.input();
+    tt.input2();
+    tt.cal();
+
+}
