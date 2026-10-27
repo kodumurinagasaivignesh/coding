@@ -941,3 +941,39 @@ int main() {
     n=dd.operator float();
     cout<<n;
 }
+
+
+
+#include<iostream>
+using namespace std;
+class first//base class
+{protected:
+    int a,b;
+public:
+    void take1()
+    {
+        cin>>a>>b;
+    }
+};
+class second:public first //second is derived class
+{
+    int c;
+public:
+    void take2()
+    {
+        cin>>c;
+    }
+    void process()
+    {
+
+        cout<<a*b*c;
+    }
+};
+int main()
+{
+    class second s1;
+    s1.take1();
+    s1.take2();
+    s1.process();
+
+}
