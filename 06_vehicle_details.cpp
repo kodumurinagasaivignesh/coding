@@ -1014,3 +1014,58 @@ int main()
     tt.cal();
 
 }
+
+
+//create a class named as assignment wih two protected data members ca1,ca2,
+//derive as a class examm from base class assignment
+//and having data members att_marks,ete_marks display the detail is student pass or fail in subject passing criteria is>=40 marks total and >=30 in mte or ete or together
+
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Assignment {
+protected:
+    double ca1;
+    double ca2;
+    double ete;
+
+public:
+    void take() {
+        cin >> ca1 >> ca2 >> ete;
+    }
+};
+
+class Exam : public Assignment {
+private:
+    double att_marks;
+    double ete_marks;
+
+public:
+    void take2() {
+        cin >> att_marks >> ete_marks;
+    }
+
+    void Result() {
+        double total_marks = ca1 + ca2 + ete + att_marks + ete_marks;
+
+        if (total_marks >= 40 &&
+            (ete >= 30 || ete_marks >= 30 ||
+             (ete + ete_marks) >= 30)) {
+            cout << "pass" << endl;
+        } else {
+            cout << "fail" << endl;
+        }
+    }
+};
+
+int main() {
+    class Exam ee;
+    ee.take();
+    ee.take2();
+    ee.Result();
+
+    return 0;
+}
