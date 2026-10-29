@@ -1069,3 +1069,60 @@ int main() {
 
     return 0;
 }
+
+#include<iostream>
+using namespace std;
+class basic
+{protected:
+    int a;
+public:
+    void one()
+    {
+        cin>>a;
+    }
+};
+class basic2
+{protected:
+
+    int b;
+    public:
+    void two()
+    {
+        cin>>b;
+
+    }
+
+};
+class derived:public basic,public basic2
+{
+    int c;
+    public:
+    void three()
+    {
+        cin>>c;
+    }
+    void process ()
+    {
+        if(a>b&&a>c)
+        {
+            cout<<a;
+        }
+        else if(b>a&&b>c)
+        {
+            cout<<b;
+        }
+        else
+        {
+            cout<<c;
+        }
+    }
+
+};
+int main ()
+{
+   class derived dd;
+   dd.one();
+   dd.two();
+   dd.three();
+   dd.process();
+}
