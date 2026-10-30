@@ -1311,3 +1311,55 @@ int main()
     tt.fun1();
     tt.one::fun1();
 }
+
+
+//hybrid or multipath inheritence
+#include <iostream>
+using namespace std;
+class one
+{protected:
+    float num1;
+public:
+    void in1()
+    {
+        cin>>num1;
+    }
+
+};
+class two:public virtual one
+{
+    protected:
+    float num2;
+public:
+    void in2()
+    {
+        cin>>num2;
+    }
+
+};
+class three :virtual public one
+{protected:
+    float num3;
+public:
+    void in3()
+    {
+        cin>>num3;
+    }
+
+};
+class four: public two,public three
+{public:
+    void out()
+    {
+    cout<<num1*num2*num3<<endl;
+    }
+
+};
+int main()
+{
+    class four ff;
+    ff.in1();
+    ff.in2();
+    ff.in3();
+    ff.out();
+}
