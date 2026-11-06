@@ -1363,3 +1363,70 @@ int main()
     ff.in3();
     ff.out();
 }
+
+/*#include<iostream>
+using namespace std;
+#include<stdlib.h>
+int main()
+{
+    int *p=new int;
+    char *c=new char;
+    float *f=new float;
+    *p=100;
+    cout<<*p<<endl;
+    *c='t';
+    cout<<*c<<endl;
+    *f=1.43;
+    cout<<*f;
+}*/
+
+/*
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5]={1,2,3,4,5};
+    cout<<&a[3]<<endl;
+    cout<<*(a+3)<<endl;
+    cout<<*(3+a);
+}*/
+
+
+
+
+#include<iostream>
+using namespace std;
+#include<stdlib.h>
+int main()
+{
+    int *r;
+    int size;
+    int sr;
+    int count;
+    cout<<"enter the size of array";
+    cin>>size;
+    r=new int[size];
+    int i;
+    cout<<"enter the data";
+    for(i=0;i<size;i++)
+    {
+        cin>>*(r+i);
+    }
+    cout<<"enter the number to search";
+    cin>>sr;
+    for (i=0;i<size;i++)
+    {
+        if (*(r+i)==sr)
+        {
+            count++;
+        }
+    }
+    if(count>0)
+    {
+        cout<<sr<<"exist in array";
+    }
+    else
+        cout<<sr<<"not found";
+}
+
+
