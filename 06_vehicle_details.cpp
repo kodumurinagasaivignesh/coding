@@ -1427,6 +1427,12 @@ int main()
     }
     else
         cout<<sr<<"not found";
+    delete []r;
+    cout<<"value after deletion"<<endl;
+    for(i=0;i<size;i++)
+    {
+        cout<<*(r+i)<<endl;
+    }
 }
 
 
