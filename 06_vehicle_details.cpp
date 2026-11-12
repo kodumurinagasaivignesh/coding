@@ -1435,4 +1435,15 @@ int main()
     }
 }
 
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+int main ()
+{
+    int *r;
+    r=new int;//new keyword
+    *r=45.3875;
+    cout<<*r;
+    delete r;
+}
 
