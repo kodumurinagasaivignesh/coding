@@ -1447,3 +1447,40 @@ int main ()
     delete r;
 }
 
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+int main ()
+{
+   /*int a[7],i;
+   for (i=0;i<7;i++)
+   {
+       cin>>a[i];
+   }
+   int largest=a[0];
+   for(i=0;i<7;i++)
+   {
+       if( largest<a[i])
+        largest=a[i];
+
+   }
+   cout<<largest;*/
+
+
+   int *a;
+   int i,size;
+   cin>>size;
+   a=new int[size];
+   for (i=0;i<size;i++)
+   {
+       cin>>*(a+i);
+   }
+   int largest=*(a+0);
+   for(i=0;i<size;i++)
+   {
+       if( largest<*(a+i))
+        largest=*(a+i);
+
+   }
+   cout<<largest;
+}
