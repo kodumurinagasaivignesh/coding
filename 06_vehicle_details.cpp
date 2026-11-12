@@ -1509,3 +1509,35 @@ int main()
         cout<<*(name+i);
     }
 }
+/*#include<iostream>
+using namespace std;
+int main()
+{
+    char *name;
+    int n;
+    cin>>n;
+    name = new char[n];
+    for (int i=0;i<n;i++ )
+    {
+        cin>>*(name+i);
+    }
+    for (int i=0;i<n;i++)
+    {
+        if ((*(name+i)>=97)&&(*(name+i)<=122))
+            {
+                *(name+i)=*(name+i)-32;
+            }
+    }
+    for (int i=0;i<n;i++)
+    {
+        cout<<*(name+i);
+    }
+    delete[]name;
+    for (int i=0;i<n;i++)
+    {
+        cout<<*(name+i);
+    }
+}*/
+/*enter your name and print the name
+input sai output SaI*/
+
