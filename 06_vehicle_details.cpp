@@ -1484,3 +1484,28 @@ int main ()
    }
    cout<<largest;
 }
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    char *name;
+    int n;
+    cin>>n;
+    name = new char[n];
+    for (int i=0;i<n;i++ )
+    {
+        cin>>*(name+i);
+    }
+    for (int i=0;i<n;i++)
+    {
+        if ((*(name+i)>=97)&&(*(name+i)<=122))
+            {
+                *(name+i)=*(name+i)-32;
+            }
+    }
+    for (int i=0;i<n;i++)
+    {
+        cout<<*(name+i);
+    }
+}
