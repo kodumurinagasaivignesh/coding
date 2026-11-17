@@ -1694,4 +1694,65 @@ int main()
     
 }
 
+/*#include<iostream>
+#include<stdlib.h>
+using namespace std;
+class one
+{public:
+    one()
+    {
+        cout<<"we are in class one"<<endl;
+    }
+    ~one()
+    {        cout<<"we are in destof class one"<<endl;
+    }
+};
+class two:public one
+{public:
+    two()
+    {
+        cout<<"we are in class two "<<endl;
+    }
+    ~two()
+    {        cout<<"we are in destof class two"<<endl;
+    }
+};
+int main()
+{
+    class one *k;
+    k=new two;
+    delete k;
+
+}*/
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+class sem1
+{public:
+	virtual void s1()
+	{
+		cout<<"number fun s1 called"<<endl;
+
+	}
+	void s2()
+	{
+		cout<<"member fun s2 called"<<endl;
+
+	}
+};
+class sem2:public sem1
+{public:
+	void s1()
+	{
+		cout<<"member fun s1 called"<<endl;
+
+	}
+};
+int main()
+{class sem1 *ss;
+class sem1 ss1;
+ss=&ss1;
+ss1->s1();
+ss1->s2();
+}
 
